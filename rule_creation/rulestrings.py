@@ -60,6 +60,11 @@ if len(sys.argv) > 1:
     print('$encstring_' + str(counter) + ' = "' + rule_encode.get_hex_of_string(
         reversed_stringtoencode) + '" ascii wide nocase // ' + reversed_stringtoencode)
     counter = counter + 1
+    print("// base64 encoded, then hex encoded")
+    for i in rule_encode.get_base64variants(stringtoencode, encoding):
+        print('$encstring_' + str(counter) + ' = "' + rule_encode.get_hex_of_string(
+            i) + '" ascii wide nocase // ' + i)
+        counter = counter + 1
     print("// reversed string - frequently used obfuscation to evade tight static signatures")
     print('$encstring_' + str(counter) + ' = "' +
         reversed_stringtoencode + '" ascii wide nocase // ' + reversed_stringtoencode)
