@@ -40,6 +40,8 @@ June in Italian is "Giugno", so `If InStr(DTt, "no")` returns True
 
 If the system is displaying Japanese for native OS text, you will get `64-ビット` when querying Win32_OperatingSystem > osarchitecture
 
+It is not enough to have your Unicode language set to Japanese - the full Japanese language pack must be installed, and the OS native language set to Japanese.
+
 ```powershell
 ${Sc}=12*1000+499
 if((.('g'+'et-wMIOBj'+'eC'+'t') ('W'+('in32'+'_O')+('pe'+'r')+('at'+'ing')+('Syst'+'em'))).OsArChItecTURe -match [char]`${s`C}){...}
