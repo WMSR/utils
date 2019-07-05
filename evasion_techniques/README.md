@@ -72,6 +72,31 @@ const c=13
 'Wscript.Echo d
 ```
 
+### Emulation DOS
+
+Emulation is very likely to be more expensive than native code execution. Creating expensive loops is one way to slow down and time out emulation.
+
+*SHA256: 3d293298aaf5d5539049026e5b02bc6dfe3a5f55b20f27a782ffd50798f08a3f*
+
+```vbscript
+Function ligamii()
+For i = 1 To 1000000000
+Q = poudog(3)
+If Q = "ttt" Then Exit For
+Next
+End Function
+Function poudog(n)
+Dim i, j, m, s, chars
+Randomize: cM = "abcdefghijklmnopqrstuvwxyzQWERTYUIOPASDFGHJKLZXCVBNM"
+m = Len(cM)
+For i = 1 To n
+j = 1 + Int(m * Rnd())
+s = s & Mid(cM, j, 1)
+Next
+poudog = s
+End Function
+```
+
 # Machine Learning Evasion
 ## VB
 ### Code from legitimate scripts as string literals
