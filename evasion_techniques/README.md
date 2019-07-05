@@ -114,7 +114,15 @@ End Function
 
 A technique to deal with anti-emulation DOS loops is to detect a DOS loop and shortcut the loop completion. After a few times through the loop, the emulator can set the loop condition so that the code can continue past the loop more quickly.
 
-This technique targets such shortcuts by checking if you're nearly done completing the loop normally. In this case, if you have looped 5,010,014 times `If (XyrZn=5010014) Then` Then add 424 to XIcCa `XIcCa=XIcCa+424`. If the value of XIcCa remains 1,600,977 after the loop, the script quits. Unless the loop runs its course normally, its unlikely the emulator will reach the 5 millionth time through the loop and correctly set the variable.
+This technique targets such shortcuts by checking if you're nearly done completing the loop normally. In this case, if you have looped 5,010,014 times...
+
+`If (XyrZn=5010014) Then`
+
+...then add 424 to XIcCa:
+
+`XIcCa=XIcCa+424`
+
+If the value of XIcCa remains 1,600,977 after the loop, the script quits. Unless the loop runs its course normally, its unlikely the emulator will reach the 5 millionth time through the loop and correctly set the variable.
 
 *SHA256: 52df163363942aebfddb8252b9fde1bc9e5e633a77e2cb6d4533e822a96929a8*
 
