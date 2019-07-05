@@ -97,6 +97,47 @@ Function poudog(n)
 End Function
 ```
 
+### Emulation DOS targeting loop shortcuts
+
+A technique to deal with anti-emulation DOS loops is to detect a DOS loop and shortcut the loop completion. After a few times through the loop, the emulator can set the loop condition so that the code can continue past the loop more quickly.
+
+This technique targets such shortcuts by checking if you're nearly done completing the loop normally. In this case, if you have looped 5,010,014 times `If (XyrZn=5010014) Then` Then add 424 to XIcCa `XIcCa=XIcCa+424`. If the value of XIcCa remains 1,600,977 after the loop, the script quits. Unless the loop runs its course normally, its unlikely the emulator will reach the 5 millionth time through the loop and correctly set the variable.
+
+```vbscript
+Function fcUbL()
+  gymc = 2868
+  XyrZn=424
+  XIcCa=1600977
+  Dim KTSVH
+  KTSVH = 3161
+  Do While XyrZn < 5010421
+    If (XyrZn=5010421) Then
+      Dim TxtYX
+      TxtYX = 1927
+      WScript.Quit
+      Dim bOZN
+      bOZN = 7705
+    Else
+      BlWYV = 9645
+    End if
+    Dim BqJQe
+    BqJQe = 8447
+    If (XyrZn=5010014) Then
+      XIcCa=XIcCa+424
+    Else
+    End if
+    Dim GuWq
+    GuWq = 3300
+    XyrZn=XyrZn+1
+  Loop
+  If (XIcCa=1600977) Then
+    WScript.Quit
+    Dim PdyIR
+    PdyIR = 7373
+  End if
+End Function
+```
+
 # Machine Learning Evasion
 ## VB
 ### Code from legitimate scripts as string literals
