@@ -14,7 +14,7 @@ On a non-unicode Windows system, this raises an error and can prevent macro exec
 ### Only run in environments with the datetime in Italian in the month of June
 *SHA256: 3d293298aaf5d5539049026e5b02bc6dfe3a5f55b20f27a782ffd50798f08a3f*
 
-June in Italian is "Giugno", so `If InStr(DTt, "no")` returns True
+Since June in Italian is "Giugno", `If InStr(DTt, "no")` returns True if your DateTime settings are set to Italian.
 
 ```vbscript
 Function DTt()
