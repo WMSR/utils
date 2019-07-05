@@ -90,8 +90,8 @@ Function poudog(n)
     Randomize: cM = "abcdefghijklmnopqrstuvwxyzQWERTYUIOPASDFGHJKLZXCVBNM"
     m = Len(cM)
     For i = 1 To n
-    j = 1 + Int(m * Rnd())
-    s = s & Mid(cM, j, 1)
+        j = 1 + Int(m * Rnd())
+        s = s & Mid(cM, j, 1)
     Next
     poudog = s
 End Function
