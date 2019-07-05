@@ -31,7 +31,20 @@ Else
     MsgBox ("errore"): Application.Quit
 End If
 ```
+### Only run in environments where the currency symbol is ¥ and the xlCountrySetting is from Japan or Korea
 
+The character returned from `Asc(Format(msoSyncCompareAndMerge, "cur" + "rency"))` will be ¥ if the system's Unicode settings are set to Japanese. If set to US English, it returns a single backslash `\`.
+
+Variable DateAndTime is the country code from `Application.international9xlCountrySetting)`. 81 is Japan and 82 is Korea.
+
+*SHA256: 23e85ee19a2f46f4f462e72995b6a91616ea2f315908c1566c36cd0afc3aa200*
+
+```vbscript
+ZeRo = Asc(Format(msoSyncCompareAndMerge, "cur" + "rency"))
+Function DateAndTime()
+DateAndTime = Application.International(xlCountrySetting)
+If ZeRo = 92 And DateAndTime > 80 And DateAndTime < 83 Then ConflictResolutions1
+```
 
 ## PowerShell
 
