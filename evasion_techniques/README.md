@@ -80,20 +80,20 @@ Emulation is very likely to be more expensive than native code execution. Creati
 
 ```vbscript
 Function ligamii()
-For i = 1 To 1000000000
-Q = poudog(3)
-If Q = "ttt" Then Exit For
-Next
+    For i = 1 To 1000000000
+        Q = poudog(3)
+        If Q = "ttt" Then Exit For
+    Next
 End Function
 Function poudog(n)
-Dim i, j, m, s, chars
-Randomize: cM = "abcdefghijklmnopqrstuvwxyzQWERTYUIOPASDFGHJKLZXCVBNM"
-m = Len(cM)
-For i = 1 To n
-j = 1 + Int(m * Rnd())
-s = s & Mid(cM, j, 1)
-Next
-poudog = s
+    Dim i, j, m, s, chars
+    Randomize: cM = "abcdefghijklmnopqrstuvwxyzQWERTYUIOPASDFGHJKLZXCVBNM"
+    m = Len(cM)
+    For i = 1 To n
+    j = 1 + Int(m * Rnd())
+    s = s & Mid(cM, j, 1)
+    Next
+    poudog = s
 End Function
 ```
 
