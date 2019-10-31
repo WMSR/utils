@@ -53,9 +53,14 @@ Check the users on the system for the following users:
 - John
 - John Doe
 - Johnson
+- MALTEST
+- MALWARE
 - milozs
 - Peter Wilson
+- SANDBOX
 - SystemIT | admin
+- TEQUILABOOMBOOM
+- VIRUS
 - VmRemoteGuest
 - WIN7 – TRAPS
 - Wilber
@@ -115,6 +120,8 @@ Check for the existence of or the data in the following keys:
 - HARDWARE\Description\System\VideoBiosVersion (Look for VirtualBox)
 - SOFTWARE\Microsoft\Windows\CurrentVersion\SystemBiosVersion (See Footnote #1)
 - HARDWARE\DESCRIPTION\System\SystemBiosVersion
+- SOFTWARE\VMware, Inc.\VMware Tools
+- SOFTWARE\Oracle\VirtualBox Guest Additions
 
 
 ### Other Notable Methodologies
@@ -130,8 +137,13 @@ Check for the existence of or the data in the following keys:
 - https://unit42.paloaltonetworks.com/unit42-upatre-continues-evolve-new-anti-analysis-techniques/
 - https://www.bleepingcomputer.com/news/security/upgraded-jasperloader-malware-adds-anti-analysis-mechanisms/
 - https://blog.trendmicro.com/trendlabs-security-intelligence/new-emotet-hijacks-windows-api-evades-sandbox-analysis/
+- https://blog.malwarebytes.com/threat-analysis/2015/08/inside-neutrino-botnet-builder/
 
 ### Footnotes
 1. 55274-640-2673064-23950: Joe Sandbox <br/>
 76487-644-3177037-23510: CWSandbox <br/>
-76487-337-8429955-22614: CWSandbox
+76487-337-8429955-22614: CWSandbox <br/>
+or string matches on: <br/>
+- VBOX
+- QEMU
+- BOCHS
