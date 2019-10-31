@@ -100,7 +100,6 @@ Check for the existence of or the data in the following keys:
 - https://www.bleepingcomputer.com/news/security/upgraded-jasperloader-malware-adds-anti-analysis-mechanisms/
 
 ### Footnotes
-1. 55274-640-2673064-23950: Joe Sandbox
-76487-644-3177037-23510: CWSandbox
+1. 55274-640-2673064-23950: Joe Sandbox <br/>
+76487-644-3177037-23510: CWSandbox <br/>
 76487-337-8429955-22614: CWSandbox
-
