@@ -1,4 +1,4 @@
-# Target Selection and Sandbox Detection
+# Analysis Detection
 
 ### Processes
 Check the running processes on the box for the following processes:
@@ -6,37 +6,38 @@ Check the running processes on the box for the following processes:
 - B.exe
 - BehaviorDumper
 - BennyDB.exe
+- BOT.EXE
 - ctfmon.exe
 - DFLocker64
 - FrzState2k
-- gemu – ga.exe
+– ga.exe
+- gemu 
 - iexplore.exe
 - ImmunityDebugger
+- KLAVME.EXE
 - LOGSystem.Agent.Service.exe
 - lordPE.exe
+- MALWARE.EXE
+- MYAPP.EXE
 - ProcessHacker
 - procexp
 - Procmon
-- PROCMON
 - Proxifier.exe
+- Python.EXE
+- SAMPLE.EXE
+- SANDBOX.EXE
+- sandboxie
 - tcpdump
+- TEST.EXE
+- TESTAPP.EXE
 - VBoxService
 - VBoxTray.exe
+- vmacthlp.exe
 - vmtoolsd
 - vmware
 - VzService.exe
 - windanr.exe
 - Wireshark
-- SAMPLE.EXE
-- MALWARE.EXE
-- BOT.EXE
-- SANDBOX.EXE
-- TEST.EXE
-- KLAVME.EXE
-- MYAPP.EXE
-- TESTAPP.EXE
-- Python.EXE
-- vmacthlp.exe
 
 
 ### Usernames
@@ -50,6 +51,7 @@ Check the users on the system for the following users:
 - SystemIT | admin
 - VmRemoteGuest
 - WIN7 – TRAPS
+
 
 ### Loaded DLLs
 Check your processes for the following DLLs loaded:
@@ -79,12 +81,14 @@ Check for the following MAC Addresses:
 | 001C4200	| Parallels |
 | 00163E00	| XenSource |
 
+
 ### Registry Queries
 Check for the existence of or the data in the following keys:
 - \HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Word\User MRU (Look for recently opened files)
 - HARDWARE\Description\System\VideoBiosVersion (Look for VirtualBox)
 - SOFTWARE\Microsoft\Windows\CurrentVersion\SystemBiosVersion (See Footnote #1)
 - HARDWARE\DESCRIPTION\System\SystemBiosVersion
+
 
 ### Other Notable Methodologies
 - Language Checks
