@@ -10,7 +10,7 @@ Check the running processes on the box for the following processes:
 - ctfmon.exe
 - DFLocker64
 - FrzState2k
-– ga.exe
+- ga.exe
 - gemu 
 - iexplore.exe
 - ImmunityDebugger
