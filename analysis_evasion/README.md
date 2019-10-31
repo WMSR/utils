@@ -24,10 +24,12 @@ Check the running processes on the box for the following processes:
 - Procmon
 - Proxifier.exe
 - Python.EXE
+- regshot
 - SAMPLE.EXE
 - SANDBOX.EXE
 - sandboxie
 - tcpdump
+- tcpview
 - TEST.EXE
 - TESTAPP.EXE
 - VBoxService
@@ -38,6 +40,8 @@ Check the running processes on the box for the following processes:
 - VzService.exe
 - windanr.exe
 - Wireshark
+- x32dbg
+- x64dbg
 
 
 ### Usernames
