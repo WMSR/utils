@@ -83,7 +83,7 @@ Check for the following MAC Addresses:
 Check for the existence of or the data in the following keys:
 - \HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Word\User MRU (Look for recently opened files)
 - HARDWARE\Description\System\VideoBiosVersion (Look for VirtualBox)
-- SOFTWARE\Microsoft\Windows\CurrentVersion\SystemBiosVersion (See Footnote 1 [^1] )
+- SOFTWARE\Microsoft\Windows\CurrentVersion\SystemBiosVersion (See Footnote #1)
 - HARDWARE\DESCRIPTION\System\SystemBiosVersion
 
 ### Other Notable Methodologies
@@ -99,8 +99,8 @@ Check for the existence of or the data in the following keys:
 - https://unit42.paloaltonetworks.com/unit42-upatre-continues-evolve-new-anti-analysis-techniques/
 - https://www.bleepingcomputer.com/news/security/upgraded-jasperloader-malware-adds-anti-analysis-mechanisms/
 
-
-[^1]: 55274-640-2673064-23950: Joe Sandbox
+### Footnotes
+1. 55274-640-2673064-23950: Joe Sandbox
 76487-644-3177037-23510: CWSandbox
 76487-337-8429955-22614: CWSandbox
 
