@@ -46,15 +46,19 @@ Check the running processes on the box for the following processes:
 
 ### Usernames
 Check the users on the system for the following users:
+- admin
 - Emily
 - HAPUBWS
 - Hong Lee
+- John
+- John Doe
 - Johnson
 - milozs
 - Peter Wilson
 - SystemIT | admin
 - VmRemoteGuest
 - WIN7 – TRAPS
+- Wilber
 
 
 ### Loaded DLLs
@@ -70,6 +74,25 @@ Check your processes for the following DLLs loaded:
 - Sf2.dll
 - cmdvrt32.dll
 - snxhk.dll
+
+
+### NETBIOS Names
+- KLONE_X64-PC
+- TEQUILABOOMBOOM
+- Starts with SC
+- Starts with CW
+
+
+### Files Present
+- C:\take_screenshot.ps1
+- C:\loaddll.exe
+- C:\email.doc
+- C:\123\email.doc
+- C:\123\email.docx
+- C:\a\foobar.bmp
+- C:\a\foobar.doc
+- C:\a\foobar.gif
+
 
 ### MAC Addresses
 Check for the following MAC Addresses:
@@ -106,6 +129,7 @@ Check for the existence of or the data in the following keys:
 - https://github.com/LordNoteworthy/al-khaser
 - https://unit42.paloaltonetworks.com/unit42-upatre-continues-evolve-new-anti-analysis-techniques/
 - https://www.bleepingcomputer.com/news/security/upgraded-jasperloader-malware-adds-anti-analysis-mechanisms/
+- https://blog.trendmicro.com/trendlabs-security-intelligence/new-emotet-hijacks-windows-api-evades-sandbox-analysis/
 
 ### Footnotes
 1. 55274-640-2673064-23950: Joe Sandbox <br/>
