@@ -1,12 +1,12 @@
 #!/bin/bash
-if [[ $(sudo docker ps -f status=running -f ancestor=vipermonkey -l | tail -n +2) ]]; then
+if [[ $(sudo docker ps -f status=running -f ancestor=haroldogden/vipermonkey -l | tail -n +2) ]]; then
 	echo "[+] Docker container is already running!"
 else
 	echo "[!] Container is not running. Starting now..."
 	sudo docker run --rm -d -t haroldogden/vipermonkey:latest
 fi
 
-docker_id=$(sudo docker ps -f status=running -f ancestor=vipermonkey -l | tail -n +2 | cut -f1 -d' ')
+docker_id=$(sudo docker ps -f status=running -f ancestor=haroldogden/vipermonkey -l | tail -n +2 | cut -f1 -d' ')
 
 echo "[*] Attempting to copy file $1 into docker ID $docker_id"
 
