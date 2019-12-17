@@ -24,8 +24,8 @@ sudo docker exec $docker_id sh -c "cd /opt;for d in *; do cd \$d; git pull; cd /
 echo "[*] Disabling network connection for container ID $docker_id"
 sudo docker network disconnect bridge $docker_id
 
-sudo docker cp $1 $docker_id:/root/$file_basename
-sudo docker exec $docker_id sh -c "/opt/ViperMonkey/vipermonkey/vmonkey.py -s --ioc /root/$file_basename"
+sudo docker cp "$1" "$docker_id:/root/$file_basename"
+sudo docker exec $docker_id sh -c "/opt/ViperMonkey/vipermonkey/vmonkey.py -s --ioc '/root/$file_basename'"
 
 echo "[*] Done - Killing docker container $docker_id"
 sudo docker stop $docker_id > /dev/null
