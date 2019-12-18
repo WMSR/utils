@@ -1,10 +1,10 @@
 #!/bin/bash
 if [[ $(sudo docker ps -f status=running -f ancestor=haroldogden/vipermonkey -l | tail -n +2) ]]; then
-	echo "[+] Docker container is already running!"
+        echo "[+] Docker container is already running!"
 else
-	echo "[!] Container is not running. Starting now..."
-	sudo docker pull haroldogden/vipermonkey:latest
-	sudo docker run --rm -d -t haroldogden/vipermonkey:latest
+        echo "[!] Container is not running. Starting now..."
+        sudo docker pull haroldogden/vipermonkey:latest
+        sudo docker run --rm -d -t haroldogden/vipermonkey:latest
 fi
 
 docker_id=$(sudo docker ps -f status=running -f ancestor=haroldogden/vipermonkey -l | tail -n +2 | cut -f1 -d' ')
@@ -25,7 +25,19 @@ echo "[*] Disabling network connection for container ID $docker_id"
 sudo docker network disconnect bridge $docker_id
 
 sudo docker cp "$1" "$docker_id:/root/$file_basename"
+
+if [ $# -eq 1 ]
+  then
 sudo docker exec $docker_id sh -c "/opt/ViperMonkey/vipermonkey/vmonkey.py -s --ioc '/root/$file_basename'"
+elif [ $# -eq 2 ]
+  then
+sudo docker exec $docker_id sh -c "/opt/ViperMonkey/vipermonkey/vmonkey.py -s --ioc '/root/$file_basename' -o /root/report.json"
+sudo docker cp "$docker_id:/root/report.json" "$2"
+echo "[*] json report saved to '$2'"
+else
+echo "[!] Please supply at least 1 argument to analyze a file. Supply a 2nd argument for json file output. No more than 2 arguments are supported."
+fi
 
 echo "[*] Done - Killing docker container $docker_id"
 sudo docker stop $docker_id > /dev/null
+
