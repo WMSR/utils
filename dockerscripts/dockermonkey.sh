@@ -11,7 +11,7 @@ docker_id=$(sudo docker ps -f status=running -f ancestor=haroldogden/vipermonkey
 
 echo "[*] Attempting to copy file $1 into container ID $docker_id"
 
-file_basename=$(basename $1)
+file_basename=$(basename "$1")
 
 echo "[*] Starting openoffice listener for file content conversions..."
 
