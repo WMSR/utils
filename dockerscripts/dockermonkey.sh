@@ -1,6 +1,16 @@
 #!/bin/bash
-echo "[*] Running 'docker ps' to see if script has required privileges to run..."
 
+if [ "$(uname)" == "Darwin" ]; then
+        echo "[*] User running on a Mac"
+        if [ "$(docker-machine status)" == "Stopped" ]; then
+                echo "[*] 'docker-machine' is Stopped. Starting it and instantiating the environment."
+                docker-machine start
+                docker-machine env
+                eval $(docker-machine env)
+        fi
+fi
+
+echo "[*] Running 'docker ps' to see if script has required privileges to run..."
 docker ps
 
 if [ $? -ne 0 ]; then
