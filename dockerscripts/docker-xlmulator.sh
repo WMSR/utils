@@ -54,11 +54,11 @@ if [ $# -eq 1 ]
 docker exec $docker_id sh -c "/opt/xlmulator/xlmulator.py '/root/$file_basename'"
 elif [ $# -eq 2 ]
   then
-docker exec $docker_id sh -c "/opt/xlmulator/xlmulator.py '/root/$file_basename'"
-#docker cp "$docker_id:/root/report.json" "$2"
-#echo "[*] json report saved to '$2'"
-#else
-#echo "[!] Please supply at least 1 argument to analyze a file. Supply a 2nd argument for json file output. No more than 2 arguments are supported."
+docker exec $docker_id sh -c "/opt/xlmulator/xlmulator.py '/root/$file_basename' -o /root/report.json"
+docker cp "$docker_id:/root/report.json" "$2"
+echo "[*] json report saved to '$2'"
+else
+echo "[!] Please supply at least 1 argument to analyze a file. Supply a 2nd argument for json file output. No more than 2 arguments are supported."
 fi
 
 #docker exec $docker_id bash
