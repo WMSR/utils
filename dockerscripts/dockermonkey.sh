@@ -19,14 +19,12 @@ if [ $? -ne 0 ]; then
 fi
 
 if [[ $(docker ps -f status=running -f ancestor=haroldogden/vipermonkey -l | tail -n +2) ]]; then
-        echo "[+] Docker container is already running!"
-else
-        echo "[!] Container is not running. Starting now..."
-        docker pull haroldogden/vipermonkey:latest
-        docker run --rm -d -t haroldogden/vipermonkey:latest
+        echo "[+] Other ViperMonkey containers are running!"
 fi
 
-docker_id=$(docker ps -f status=running -f ancestor=haroldogden/vipermonkey -l | tail -n +2 | cut -f1 -d' ')
+echo "[*] Pulling and starting container..."
+docker pull haroldogden/vipermonkey:latest
+docker_id=$(docker run --rm -d -t haroldogden/vipermonkey:latest)
 
 echo "[*] Attempting to copy file $1 into container ID $docker_id"
 
@@ -38,7 +36,7 @@ docker exec $docker_id sh -c '/usr/lib/libreoffice/program/soffice.bin --headles
 
 echo "[*] Checking for ViperMonkey and dependency updates..."
 
-docker exec $docker_id sh -c "cd /opt;for d in *; do cd \$d; git pull; cd /opt; done"
+docker exec $docker_id sh -c "cd /opt;for d in *; do cd \$d; git pull > /dev/null 2>&1; cd /opt; done"
 
 echo "[*] Disabling network connection for container ID $docker_id"
 docker network disconnect bridge $docker_id
